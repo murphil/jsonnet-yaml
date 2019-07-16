@@ -1,7 +1,6 @@
 FROM alpine:3.10 as yaml
 
 RUN set -ex \
-  ; sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
   ; apk add --no-cache --virtual .build-deps \
         gcc \
         g++ \
