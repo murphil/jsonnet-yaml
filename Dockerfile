@@ -39,6 +39,8 @@ RUN set -ex \
 
 FROM nnurphy/jsonnet
 ENV PATH=/usr/local/bin:$PATH
+RUN apk add --no-cache jq
 ENTRYPOINT [  ]
 COPY --from=yaml /usr/local/lib /usr/local/lib
 COPY --from=yaml /usr/local/bin/json-yaml /usr/local/bin
+COPY ys /usr/local/bin

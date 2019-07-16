@@ -1,0 +1,5 @@
+jq -c '.[]' | \
+while read line; do
+    echo '---'
+    echo $line | json-yaml
+done
